@@ -1,0 +1,228 @@
+/* biome-ignore-all lint/complexity/noImportantStyles: usefull here */
+/* eslint-disable no-important */
+
+/* 
+ * CSS Reseting Stylesheet
+ * This stylesheet is designed to reset default browser styles
+ * and provide a consistent baseline for styling across different
+ * browsers and devices.
+ *
+ * Based on  TailwindCSS's Preflight styles, Eric Meyer's CSS Reset Josh comeau's Modern CSS Reset,
+ * and my opinionated tweaks.
+ */
+
+
+*,
+::before,
+::after,
+::file-selector-button {
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+    box-sizing: border-box;
+    line-height: calc(1em + 0.5rem);
+}
+
+html {
+    font-variant: normal;
+
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    tab-size: 4;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+ul,
+ol,
+menu {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    letter-spacing: -0.05ch;
+}
+
+p {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-inline-size: 100%;
+}
+
+button,
+input:where([type='button'], [type='reset'], [type='submit']),
+::file-selector-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    line-height: 1.0;
+    appearance: button;
+}
+
+input,
+button,
+textarea,
+optgroup,
+select {
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    opacity: 1;
+}
+
+textarea {
+    resize: vertical;
+}
+
+hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: inherit;
+    font-size: 1em;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+table {
+    border-color: inherit;
+    border-collapse: collapse;
+    text-indent: 0;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+summary {
+    display: list-item;
+}
+
+abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+:-moz-focusring {
+    outline: auto;
+}
+
+::placeholder {
+    opacity: 1;
+}
+
+@supports (not (-webkit-appearance: -apple-pay-button)) or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+    }
+}
+
+::-webkit-datetime-edit {
+    display: inline-flex;
+}
+
+::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+}
+
+::-webkit-datetime-edit,
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-minute-field,
+::-webkit-datetime-edit-second-field,
+::-webkit-datetime-edit-millisecond-field,
+::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+}
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
