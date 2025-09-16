@@ -4,6 +4,7 @@
     "": {
       "name": "paprika",
       "dependencies": {
+        "@hono/bun-compress": "^0.1.0",
         "hono": "^4.9.7",
       },
       "devDependencies": {
@@ -35,6 +36,8 @@
     "@biomejs/cli-win32-arm64": ["@biomejs/cli-win32-arm64@2.2.4", "", { "os": "win32", "cpu": "arm64" }, "sha512-NXnfTeKHDFUWfxAefa57DiGmu9VyKi0cDqFpdI+1hJWQjGJhJutHPX0b5m+eXvTKOaf+brU+P0JrQAZMb5yYaQ=="],
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.2.4", "", { "os": "win32", "cpu": "x64" }, "sha512-3Y4V4zVRarVh/B/eSHczR4LYoSVyv3Dfuvm3cWs5w/HScccS0+Wt/lHOcDTRYeHjQmMYVC3rIRWqyN2EI52+zg=="],
+
+    "@hono/bun-compress": ["@hono/bun-compress@0.1.0", "", { "peerDependencies": { "hono": "*" } }, "sha512-wxy9PdC07Yc81NawIcdIiuGAEeDujwPWd01KdxubXJ33G9vdjUO85ec0UMjH0Cy7+zfNXlcWgJ+zoATjT/IfTg=="],
 
     "@types/bun": ["@types/bun@1.2.22", "", { "dependencies": { "bun-types": "1.2.22" } }, "sha512-5A/KrKos2ZcN0c6ljRSOa1fYIyCKhZfIVYeuyb4snnvomnpFqC0tTsEkdqNxbAgExV384OETQ//WAjl3XbYqQA=="],
 
