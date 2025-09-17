@@ -1,0 +1,7 @@
+[imports]
+"@/*" = "./src/*"
+"@pages/*" = "./templates/pages/*"
+"@components/*" = "./templates/components/*"
+"@layouts/*" = "./templates/layouts/*"
+"@partials/*" = "./templates/layouts/*"
+"@styles/*" = "./templates/styles/*"

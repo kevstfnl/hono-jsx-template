@@ -1,5 +1,5 @@
 import type { Child, FC } from "hono/jsx";
-import type { SEO } from "../../src/types/seo";
+import type { SEO } from "@/types/seo";
 
 interface HTMLProps {
 	children: Child;
@@ -170,6 +170,7 @@ export const HTML: FC<HTMLProps> = ({ children, seo }) => {
 
 				{/* Icônes */}
 				<IconLinks icons={seo?.icons} />
+
 
 				{/* Meta & Links supplémentaires */}
 				{seo?.meta?.map((m) => (

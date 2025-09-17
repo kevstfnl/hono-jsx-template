@@ -1,7 +1,7 @@
+import { DefaultLayout } from "@layouts/DefaultLayout";
+import { HTML } from "@layouts/HTML";
 import type { FC } from "hono/jsx";
-import type { SEO } from "../../../src/types/seo";
-import { DefaultLayout } from "../../layouts/DefaultLayout";
-import { HTML } from "../../layouts/HTML";
+import type { SEO } from "@/types/seo";
 
 const seo: SEO = {
 	title: "Paprika | Accueil",
@@ -18,7 +18,7 @@ const seo: SEO = {
 };
 
 export const HomePage: FC = ({ title }) => (
-	<HTML>
+	<HTML seo={seo}>
 		<DefaultLayout>
 			<main>
 				<h1>{title}</h1>

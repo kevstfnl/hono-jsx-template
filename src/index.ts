@@ -1,3 +1,4 @@
+import { compress } from "@hono/bun-compress";
 import { Hono } from "hono";
 import { bodyLimit } from "hono/body-limit";
 import { every } from "hono/combine";
@@ -8,11 +9,12 @@ import { secureHeaders } from "hono/secure-headers";
 import authenticationRouter from "./routes/authentificationRouter";
 import homeRouter from "./routes/homeRouter";
 
-const port = Number(process.env.PORT || 3000);
-const maxRequestBodySize = 1024 * 20;
-const origin = JSON.parse(process.env.DOMAINS || "localhost");
+const port = process.env.PORT || 3000;
+const maxRequestBodySize = 1024 * 25;
+const origin = process.env.DOMAINS || "";
 
 const app = new Hono({ router: new RegExpRouter() })
+	.use(compress())
 	.use(
 		every(
 			cors({ origin }),

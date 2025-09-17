@@ -23,6 +23,7 @@
 		"typescript": "^5"
 	},
 	"dependencies": {
+		"@hono/bun-compress": "^0.1.0",
 		"hono": "^4.9.7"
 	}
 }

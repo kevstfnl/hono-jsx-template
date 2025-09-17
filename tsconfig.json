@@ -27,6 +27,17 @@
 
 		//JSX
 		"jsx": "react-jsx",
-		"jsxImportSource": "hono/jsx"
+		"jsxImportSource": "hono/jsx",
+
+		// Import aliases
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"@pages/*": ["templates/pages/*"],
+			"@components/*": ["templates/components/*"],
+			"@layouts/*": ["templates/layouts/*"],
+			"@partials/*": ["templates/partials/*"],
+			"@styles/*": ["templates/styles/*"]
+		}
 	}
 }
