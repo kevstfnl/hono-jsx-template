@@ -3,10 +3,12 @@ import { HTML } from "@layouts/HTML";
 import type { FC } from "hono/jsx";
 import type { SEO } from "@/types/seo";
 
+console.log("HomePage");
+
 const seo: SEO = {
-	title: "Paprika | Accueil",
-	description: "Bienvenue sur Paprika",
-	keywords: ["paprika", "recettes", "cuisine", "épices"],
+	title: "Accueil",
+	description: "Welcome",
+	keywords: [],
 	canonicalUrl: "https://monsite.fr/",
 	openGraph: {
 		type: "website",

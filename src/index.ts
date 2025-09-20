@@ -1,4 +1,3 @@
-import { compress } from "@hono/bun-compress";
 import { Hono } from "hono";
 import { bodyLimit } from "hono/body-limit";
 import { every } from "hono/combine";
@@ -14,7 +13,6 @@ const maxRequestBodySize = 1024 * 25;
 const origin = process.env.DOMAINS || "";
 
 const app = new Hono({ router: new RegExpRouter() })
-	.use(compress())
 	.use(
 		every(
 			cors({ origin }),

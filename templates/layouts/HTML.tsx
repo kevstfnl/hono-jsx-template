@@ -1,6 +1,8 @@
 import type { Child, FC } from "hono/jsx";
 import type { SEO } from "@/types/seo";
 
+console.log("HTML");
+
 interface HTMLProps {
 	children: Child;
 	seo?: SEO;
