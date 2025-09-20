@@ -46,6 +46,14 @@ export const HTML: FC<HTMLProps> = ({ children, seo }) => {
 
 				{/* Title */}
 				<title>{title}</title>
+				<link
+					rel="preload"
+					href="/assets/fonts/InterVariable.woff2"
+					as="font"
+					type="font/woff2"
+					crossorigin="anonymous"
+				/>
+				<link rel="stylesheet" href="/assets/styles/index.css" />
 
 				{/* Description */}
 				{seo?.description && (
@@ -172,7 +180,6 @@ export const HTML: FC<HTMLProps> = ({ children, seo }) => {
 
 				{/* Icônes */}
 				<IconLinks icons={seo?.icons} />
-
 
 				{/* Meta & Links supplémentaires */}
 				{seo?.meta?.map((m) => (

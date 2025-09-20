@@ -1,0 +1,29 @@
+@import "./reset.css";
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/*
+@theme {}
+*/
+
+@layer theme {
+    :root {
+        font-family: "InterVariable", sans-serif;
+        font-style: normal;
+    }
+
+    @supports (font-variation-settings: normal) {
+        :root {
+            --font-inter: "InterVariable", sans-serif;
+        }
+    }
+}
+
+@font-face {
+    font-family: 'InterVariable';
+    src: url('/assets/fonts/InterVariable.woff2') format('woff-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}

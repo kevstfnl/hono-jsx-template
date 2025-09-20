@@ -7,6 +7,7 @@ import { RegExpRouter } from "hono/router/reg-exp-router";
 import { secureHeaders } from "hono/secure-headers";
 import authenticationRouter from "./routes/authentificationRouter";
 import homeRouter from "./routes/homeRouter";
+import { serveStatic } from "hono/bun";
 
 const port = process.env.PORT || 3000;
 const maxRequestBodySize = 1024 * 25;
@@ -24,11 +25,12 @@ const app = new Hono({ router: new RegExpRouter() })
 			}),
 		),
 	)
+	.use('/*', serveStatic({ root: './public' }))
 	.route("", homeRouter)
 	.route("/auth", authenticationRouter);
 
 export default {
 	port,
-	fetch: app.fetch,
 	maxRequestBodySize,
+	fetch: app.fetch,
 };

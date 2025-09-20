@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import authguard from "@/middlewares/authguard";
 
 const authenticationRouter = new Hono()
 
@@ -11,6 +12,7 @@ const authenticationRouter = new Hono()
 	.post("/register", (c) => c.text("hi"))
 
 	// Authguard
+	.use(authguard)
 
 	.get("/logout", (c) => c.text("hi"))
 
